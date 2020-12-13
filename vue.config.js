@@ -1,5 +1,5 @@
-const path = require('path');
-const SkeletonWebpackPlugin = require('vue-skeleton-webpack-plugin');
+const path = require("path");
+const SkeletonWebpackPlugin = require("vue-skeleton-webpack-plugin");
 
 module.exports = {
     configureWebpack: {
@@ -7,12 +7,24 @@ module.exports = {
             new SkeletonWebpackPlugin({
                 webpackConfig: {
                     entry: {
-                        app: path.join(__dirname, './src/skeleton.js'),
-                    },
+                        app: path.resolve(__dirname, './src/skeleton.js')
+                    }
                 },
-                minimize: true,
                 quiet: true,
-            }),
+                minimize: true,
+                router: {
+                    mode: 'hash',
+                    routes: [{
+                            path: '/',
+                            skeletonId: 'skeleton1'
+                        },
+                        {
+                            path: '/about',
+                            skeletonId: 'skeleton2'
+                        }
+                    ]
+                }
+            })
         ]
     }
-}
+};
