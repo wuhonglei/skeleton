@@ -15,4 +15,9 @@
 缺点：svg 构建的单个组件组件占用一定量体积，此时再循环构建多个 skeleton 时，文件体积会进一步增大。
 
 疑问：
-是否有办法合并重复的内容
+是否有办法合并重复的内容，例如使用纯 css 实现上述的 skeleton 动效
+
+场景四、页面中部分区域使用 skeleton，而不是整个页面
+参考：https://markus.oberlehner.net/blog/skeleton-loading-animation-with-vue/
+
+https://github.com/maoberlehner/skeleton-loading-animation-with-vue

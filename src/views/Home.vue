@@ -1,18 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+      <a href="#title">跳转至标题</a>
+      <div class="container-wrapper"></div>
+      <div id="title">
+        标题
+      </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
   }
 };
 </script>
+
+<style lang="postcss" scoped>
+  .container-wrapper {
+      height: 600px;
+      background-color: blue;
+  }
+</style>

@@ -27,7 +27,13 @@ const routes = [{
 ];
 
 const router = new VueRouter({
-    routes
+    routes,
 });
+
+
+router.beforeEach((to, from, next) => {
+    let isRealRoute = (to.path !== 'title');
+    next(isRealRoute);
+})
 
 export default router;
